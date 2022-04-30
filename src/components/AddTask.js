@@ -26,7 +26,11 @@ const AddTask = ({ newTask, setNewTask, tasks, setTasks }) => {
               tasks.find((t) => t.text === newTask) === undefined
             ) {
               const newTasks = [...tasks];
-              const newObj = { text: newTask, isChecked: false };
+              const newObj = {
+                text: newTask,
+                isChecked: false,
+                created: Date.now(),
+              };
               newTasks.push(newObj);
               setTasks(newTasks);
               setError(false);

@@ -36,6 +36,8 @@ const Paginate = ({
                 onClick={() => {
                   setPageNumber(index / maxCountPerPage + 1);
                   const sortedTasks = [...tasks];
+                  //sort by time since creation to get newer tasks first
+                  sortedTasks.sort((a, b) => b.created - a.created);
                   //transform to number to sort non checked tasks first
                   sortedTasks.sort(
                     (a, b) => Number(a.isChecked) - Number(b.isChecked)
