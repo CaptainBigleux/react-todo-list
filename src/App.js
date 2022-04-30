@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
+import SearchTask from "./components/SearchTask";
 
 import "./App.css";
 import Paginate from "./components/Paginate";
@@ -17,9 +18,10 @@ library.add(faListCheck, faCircleHalfStroke);
 const App = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
-  const [maxCountPerPage] = useState(10);
+  const [maxCountPerPage] = useState(8);
   const [pageNumber, setPageNumber] = useState(1);
   const [darkMode, setDarkMode] = useState(false);
+  const [searchTask, setSearchTask] = useState("");
 
   return (
     <div className={darkMode ? "app-dark" : "app"}>
@@ -39,6 +41,7 @@ const App = () => {
             maxCountPerPage={maxCountPerPage}
             pageNumber={pageNumber}
             darkMode={darkMode}
+            searchTask={searchTask}
           />
           <Paginate
             maxCountPerPage={maxCountPerPage}
@@ -47,8 +50,16 @@ const App = () => {
             pageNumber={pageNumber}
             setPageNumber={setPageNumber}
             darkMode={darkMode}
+            searchTask={searchTask}
           />
         </div>
+        <SearchTask
+          maxCountPerPage={maxCountPerPage}
+          tasks={tasks}
+          darkMode={darkMode}
+          searchTask={searchTask}
+          setSearchTask={setSearchTask}
+        />
       </div>
       <Footer darkMode={darkMode} />
     </div>
