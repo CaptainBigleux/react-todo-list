@@ -15,9 +15,11 @@ const AddTask = ({ newTask, setNewTask, tasks, setTasks }) => {
       <button
         className="add-task-btn"
         onClick={() => {
-          const newTasks = [...tasks];
-          newTasks.push(newTask);
-          setTasks(newTasks);
+          if (newTask !== "") {
+            const newTasks = [...tasks];
+            newTasks.push(newTask);
+            setTasks(newTasks);
+          }
         }}
       >
         Add Task
