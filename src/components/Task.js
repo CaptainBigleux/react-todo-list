@@ -1,8 +1,8 @@
 import React from "react";
 
-const Task = ({ task, index, tasks, setTasks }) => {
+const Task = ({ task, index, tasks, setTasks, darkMode }) => {
   return (
-    <div className="task">
+    <div className={darkMode ? "task-dark" : "task"}>
       <input
         type="checkbox"
         value={task.isChecked}

@@ -1,14 +1,14 @@
 import React from "react";
 import { useState } from "react";
 
-const AddTask = ({ newTask, setNewTask, tasks, setTasks }) => {
+const AddTask = ({ newTask, setNewTask, tasks, setTasks, darkMode }) => {
   const [error, setError] = useState(false);
   return (
     <>
       {error ? (
         <div className="error-text">Task is empty or already exists.</div>
       ) : null}
-      <div className="add-task-holder">
+      <div className={darkMode ? "add-task-holder-dark" : "add-task-holder"}>
         <input
           className={error ? "add-task-input error" : "add-task-input"}
           type="text"

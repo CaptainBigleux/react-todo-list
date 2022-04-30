@@ -1,13 +1,13 @@
 import React from "react";
 import Task from "./Task";
 
-const Tasks = ({ tasks, setTasks, maxCountPerPage, pageNumber }) => {
+const Tasks = ({ tasks, setTasks, maxCountPerPage, pageNumber, darkMode }) => {
   const filteredTasks = [];
   for (let i = (pageNumber - 1) * maxCountPerPage; i < tasks.length; i++) {
     if (filteredTasks.length < maxCountPerPage) filteredTasks.push(tasks[i]);
   }
   return (
-    <>
+    <div className="tasks-holder">
       {filteredTasks.map((task, index) => {
         return (
           <Task
@@ -16,10 +16,11 @@ const Tasks = ({ tasks, setTasks, maxCountPerPage, pageNumber }) => {
             task={task}
             tasks={tasks}
             setTasks={setTasks}
+            darkMode={darkMode}
           />
         );
       })}
-    </>
+    </div>
   );
 };
 

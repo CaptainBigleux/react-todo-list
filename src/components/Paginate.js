@@ -6,9 +6,10 @@ const Paginate = ({
   setTasks,
   pageNumber,
   setPageNumber,
+  darkMode,
 }) => {
   return (
-    <div className="paginate">
+    <div className={darkMode ? "paginate-dark" : "paginate"}>
       <span
         className={
           tasks.length / maxCountPerPage <= 1

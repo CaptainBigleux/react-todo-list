@@ -15,6 +15,14 @@
   flex-direction: column;
 }
 
+.app-dark {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: black;
+}
+
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -42,7 +50,12 @@ header {
   border-bottom: 2px grey solid;
   display: flex;
   align-items: center;
-  min-height: 50px;
+  justify-content: space-between;
+  min-height: 100px;
+}
+
+.list-icon {
+  margin-right: 10px;
 }
 
 footer {
@@ -50,8 +63,13 @@ footer {
   justify-content: center;
   align-items: center;
   color: #5c48d3;
-  min-height: 50px;
+  min-height: 100px;
   margin-top: auto;
+}
+
+.dark-footer {
+  background-color: black;
+  color: rgb(211, 136, 255);
 }
 
 .container {
@@ -59,11 +77,22 @@ footer {
   margin: 30px auto;
 }
 
-.task-add-task-holder {
+.container-dark {
+  width: 1200px;
+  margin: 30px auto;
+  background-color: black;
+  color: white;
+}
+
+.app-main-holder {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.tasks-holder {
+  margin-top: 10px;
 }
 
 .add-task-holder {
@@ -71,6 +100,15 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
+
+.add-task-holder-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: black;
+  color: white;
 }
 
 .add-task-input {
@@ -104,6 +142,23 @@ footer {
   gap: 20px;
   width: 450px;
   margin: 3px 0;
+  border: 1px black solid;
+  border-radius: 2px;
+  padding: 3px;
+}
+
+.task-dark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 450px;
+  margin: 3px 0;
+  background-color: black;
+  color: white;
+  border: 1px white solid;
+  border-radius: 2px;
+  padding: 3px;
 }
 
 .task span {
@@ -114,7 +169,16 @@ footer {
   text-decoration: line-through;
 }
 
+.task-dark .line-through {
+  text-decoration: line-through;
+}
+
 .paginate {
+  display: flex;
+  gap: 4px;
+}
+
+.paginate-dark {
   display: flex;
   gap: 4px;
 }
@@ -123,12 +187,29 @@ footer {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.paginate-dark .paginate-link {
+  display: initial;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .paginate .active {
   text-decoration: none;
   cursor: default;
   color: black;
 }
+
+.paginate-dark .active {
+  text-decoration: none;
+  cursor: default;
+  color: white;
+}
 .paginate .display-none {
+  display: none;
+}
+
+.paginate-dark .display-none {
   display: none;
 }
 
