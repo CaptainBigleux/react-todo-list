@@ -63,7 +63,7 @@ footer {
   justify-content: center;
   align-items: center;
   color: #5c48d3;
-  min-height: 100px;
+  min-height: 80px;
   margin-top: auto;
 }
 
@@ -176,11 +176,13 @@ footer {
 .paginate {
   display: flex;
   gap: 4px;
+  justify-content: center;
 }
 
 .paginate-dark {
   display: flex;
   gap: 4px;
+  justify-content: center;
 }
 .paginate .paginate-link {
   display: initial;
@@ -240,7 +242,45 @@ footer {
 }
 
 @media (max-width: 1200px) {
-  .container {
+  .container,
+  .container-dark {
     width: 100%;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+  .add-task-holder,
+  .add-task-holder-dark {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .error-text {
+    margin-bottom: 5px;
+  }
+  .tasks-holder {
+    width: 100%;
+  }
+
+  .task,
+  .task-dark {
+    width: 95%;
+    margin: 2px auto;
+  }
+  .paginate,
+  .paginate-dark {
+    gap: 20px;
+    width: 95%;
+    padding: 10px;
+  }
+
+  .searchTask,
+  .searchTask-dark {
+    width: 95%;
+    margin: 5px auto;
+  }
+
+  footer {
+    padding: 0 10%;
   }
 }
