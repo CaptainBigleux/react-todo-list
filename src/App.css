@@ -132,6 +132,14 @@ footer {
   display: none;
 }
 
+.error {
+  border: 1px solid red;
+}
+.error-text {
+  color: red;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 1200px) {
   .container {
     width: 100%;

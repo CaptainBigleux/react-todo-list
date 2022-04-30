@@ -34,6 +34,7 @@ const App = () => {
           <Paginate
             maxCountPerPage={maxCountPerPage}
             tasks={tasks}
+            setTasks={setTasks}
             pageNumber={pageNumber}
             setPageNumber={setPageNumber}
           />

@@ -1,19 +1,22 @@
 import React from "react";
-import { useState } from "react";
 
 const Task = ({ task, index, tasks, setTasks }) => {
-  const [isChecked, setIsChecked] = useState(false);
-
   return (
     <div className="task">
       <input
         type="checkbox"
-        value={isChecked}
+        value={task.isChecked}
+        checked={task.isChecked ? true : false}
         onChange={() => {
-          setIsChecked(!isChecked);
+          const newTasks = [...tasks];
+          const t = newTasks.find((el) => el.text === task.text);
+          t.isChecked = !t.isChecked;
+          setTasks(newTasks);
         }}
       />
-      <span className={isChecked ? "line-through" : undefined}>{task}</span>
+      <span className={task.isChecked ? "line-through" : null}>
+        {task.text}
+      </span>
       <button
         onClick={() => {
           const newTasks = [...tasks];

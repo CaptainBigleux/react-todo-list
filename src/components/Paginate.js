@@ -1,6 +1,12 @@
 import React from "react";
 
-const Paginate = ({ maxCountPerPage, tasks, pageNumber, setPageNumber }) => {
+const Paginate = ({
+  maxCountPerPage,
+  tasks,
+  setTasks,
+  pageNumber,
+  setPageNumber,
+}) => {
   return (
     <div className="paginate">
       <span
@@ -29,6 +35,12 @@ const Paginate = ({ maxCountPerPage, tasks, pageNumber, setPageNumber }) => {
                 key={index}
                 onClick={() => {
                   setPageNumber(index / maxCountPerPage + 1);
+                  const sortedTasks = [...tasks];
+                  //transform to number to sort non checked tasks first
+                  sortedTasks.sort(
+                    (a, b) => Number(a.isChecked) - Number(b.isChecked)
+                  );
+                  setTasks(sortedTasks);
                 }}
               >
                 {index / maxCountPerPage + 1}
