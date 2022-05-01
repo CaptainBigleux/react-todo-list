@@ -33,6 +33,7 @@ const AddTask = ({ newTask, setNewTask, tasks, setTasks, darkMode }) => {
               };
               newTasks.push(newObj);
               setTasks(newTasks);
+              setNewTask("");
               setError(false);
             } else setError(true);
           }}

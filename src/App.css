@@ -241,6 +241,116 @@ footer {
   height: 50px;
 }
 
+.share-tasks,
+.share-tasks-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.share-tasks-btn {
+  background-color: #5c48d3;
+  padding: 10px;
+  color: white;
+  border-radius: 4px;
+  width: 120px;
+  height: 50px;
+}
+
+.share-tasks-temp-msg {
+  text-align: center;
+  animation: fadeOut ease 2s;
+  -webkit-animation: fadeOut ease 2s;
+  -moz-animation: fadeOut ease 2s;
+  -o-animation: fadeOut ease 2s;
+  -ms-animation: fadeOut ease 2s;
+  width: 120px;
+  position: absolute;
+  bottom: -40px;
+}
+
+.share-import-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.import-tasks-dark,
+.import-tasks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 2px;
+  border: 2px solid #5c48d3;
+}
+
+.import-tasks-input {
+  width: 100%;
+  background-color: #f2f7fd;
+  border: blue 1px solid;
+  border-radius: 3px;
+  padding: 10px;
+  height: 50px;
+}
+
+.import-tasks-btn {
+  background-color: #5c48d3;
+  padding: 10px;
+  color: white;
+  border-radius: 4px;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @media (max-width: 1200px) {
   .container,
   .container-dark {

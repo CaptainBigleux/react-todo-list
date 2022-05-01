@@ -5,9 +5,11 @@ import Footer from "./components/Footer";
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
 import SearchTask from "./components/SearchTask";
+import Paginate from "./components/Paginate";
+import ShareTasks from "./components/ShareTasks";
+import ImportTasks from "./components/ImportTasks";
 
 import "./App.css";
-import Paginate from "./components/Paginate";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faListCheck,
@@ -22,6 +24,8 @@ const App = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const [darkMode, setDarkMode] = useState(false);
   const [searchTask, setSearchTask] = useState("");
+  const [encoding] = useState("@&é$");
+  const [importTasks, setImportTasks] = useState("");
 
   return (
     <div className={darkMode ? "app-dark" : "app"}>
@@ -60,6 +64,16 @@ const App = () => {
           searchTask={searchTask}
           setSearchTask={setSearchTask}
         />
+        <div className="share-import-holder">
+          <ShareTasks tasks={tasks} encoding={encoding} />
+          <ImportTasks
+            darkMode={darkMode}
+            importTasks={importTasks}
+            setImportTasks={setImportTasks}
+            encoding={encoding}
+            setTasks={setTasks}
+          />
+        </div>
       </div>
       <Footer darkMode={darkMode} />
     </div>
