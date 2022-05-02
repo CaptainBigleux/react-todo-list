@@ -18,7 +18,25 @@ import {
 library.add(faListCheck, faCircleHalfStroke);
 
 const App = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([
+    { text: "buy groceries", isChecked: false, created: 1651474379894 },
+    { text: "feed the cat", isChecked: false, created: 1651474379895 },
+    { text: "call mom", isChecked: false, created: 1651474379896 },
+    { text: "rant on Twitter", isChecked: false, created: 1651474379897 },
+    { text: "learn React", isChecked: true, created: 1651474379898 },
+    { text: "be more humble", isChecked: false, created: 1651474379899 },
+    {
+      text: "check out that new tv show",
+      isChecked: false,
+      created: 1651474379890,
+    },
+    {
+      text: "go out with my friends",
+      isChecked: false,
+      created: 1651474379891,
+    },
+    { text: "get into shape", isChecked: false, created: 1651474379892 },
+  ]);
   const [newTask, setNewTask] = useState("");
   const [maxCountPerPage] = useState(8);
   const [pageNumber, setPageNumber] = useState(1);
